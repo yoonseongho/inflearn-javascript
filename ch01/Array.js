@@ -11,6 +11,7 @@
  * 순서에 맞게 index를 통해 각 요소에 접근 가능
  */
 let ranking = ["Jason", "Alice", "Chris", "Jane", "Tom"];
+
 console.log(ranking[0]); // Jason
 console.log(ranking[1]); // Alice
 console.log(ranking[2]); // Chris
