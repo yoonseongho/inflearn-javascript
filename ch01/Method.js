@@ -7,4 +7,4 @@
  * 길이 => 배열 내 요소의 개수
  */
 let ranking = ["Jason", "Alice", "Chris", "Jane", "Tom"];
-console.log(ranking.length);
+console.log(ranking.length); // 5
