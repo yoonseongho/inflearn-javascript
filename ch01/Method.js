@@ -16,8 +16,8 @@ console.log(ranking.length); // 5
 /** 배열(Array) Method
  * push() -> Array.push():  배열의 가장 뒤에 데이터를 추가해주는 Method
  * pop() -> Array.pop(): 배열의 가장 끝에 있는 데이터를 제거하는 Method
- * indexOf() Array.indexOf(): 특정 배열에서 주어진 데이터의 index 값을 찾아 반환
- * includes() Array.includes(): 특정 배열에 주어진 데이터가 존재하는지 확인(여부에 따라 참(tue), 거짓(false) 반환)
+ * indexOf() -> Array.indexOf(): 특정 배열에서 주어진 데이터의 index 값을 찾아 반환
+ * includes() -> Array.includes(): 특정 배열에 주어진 데이터가 존재하는지 확인(여부에 따라 참(tue), 거짓(false) 반환)
  */
 let ranking2 = ["Jason", "Alice", "Chris"];
 ranking2.push("Jane"); // ranking2 배열의 가장 끝에 위치한 데이터 추가: 맨 뒤에 Jane 추가
