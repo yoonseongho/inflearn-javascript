@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Document</title>
     <script>
-//        const output = function() {
-//            console.log('함수를 실행함.');
-//        };
-        const dateFormMaker = function() {
-            const inputYear = document.querySelector('#target-year-input').value;
-            const inputMonth = document.querySelector('#target-month-input').value;
-            const inputDate = document.querySelector('#target-date-input').value;
-            
-            console.log(inputYear, inputMonth, inputDate);
-        };
-    </script>
-</head>
+      //        const output = function() {
+      //            console.log('함수를 실행함.');
+      //        };
+      const dateFormMaker = function () {
+        const inputYear = document.querySelector("#target-year-input").value;
+        const inputMonth = document.querySelector("#target-month-input").value;
+        const inputDate = document.querySelector("#target-date-input").value;
 
-<body>
+        console.log(inputYear, inputMonth, inputDate);
+      };
+
+      const counterMaker = function () {
+        const nowDate = new Date();
+        const targetDate = new Date('2024-01-09');
+          console.log(nowDate);
+      };
+    </script>
+  </head>
+
+  <body>
     <input id="target-year-input" class="target-input" />
     <input id="target-month-input" class="target-input" />
     <input id="target-date-input" class="target-input" />
-    <button onclick="dateFormMaker()">버튼</button>
-</body>
+    <button onclick="counterMaker()">버튼</button>
+  </body>
 </html>
