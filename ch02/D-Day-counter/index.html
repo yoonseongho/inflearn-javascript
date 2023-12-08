@@ -12,13 +12,27 @@
         const inputMonth = document.querySelector("#target-month-input").value;
         const inputDate = document.querySelector("#target-date-input").value;
 
-        console.log(inputYear, inputMonth, inputDate);
+        // const dateForm = inputYear + '-' + inputMonth + '-' + inputDate;
+        /* 템플릿 리터럴 */
+        const dateForm = `${inputYear}-${inputMonth}-${inputDate}`;
+
+        return dateForm;
+        // console.log(inputYear, inputMonth, inputDate);
       };
 
       const counterMaker = function () {
+        const targetDateInput = dateFormMaker();
+        // console.log(targetDateInput);
         const nowDate = new Date();
-        const targetDate = new Date('2024-01-09');
-          console.log(nowDate);
+        const targetDate = new Date(targetDateInput).setHours(0, 0, 0, 0);
+        const remaining = (targetDate - nowDate) / 1000;
+
+        const remainingDate = Math.floor(remaining / 3600 / 24);
+        const remainingHours = Math.floor(remaining / 3600) % 24;
+        const remainingMin = Math.floor(remaining / 60) % 60;
+        const remainingSec = Math.floor(remaining) % 60;
+
+        console.log(remainingDate, remainingHours, remainingMin, remainingSec);
       };
     </script>
   </head>
