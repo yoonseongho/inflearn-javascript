@@ -72,6 +72,11 @@ if (savedTodoList) {
     }
 }
 
+const weatherDataActive = ({ location, weather }) => {
+    const locationNameTag = document.querySelector('#laction-name-tag');
+    locationNameTag.textContent = location;
+}
+
 const weatherSearch = (postion) => {
     console.log(postion.latitde);
     const openweatherRes = fetch(
@@ -80,17 +85,25 @@ const weatherSearch = (postion) => {
         // console.log(res.json());
         return res.json();
     }).then((json) => {
-        console.log(json.name, json.weather[0].description);
+        console.log(json.name, json.weather[0].main);
+        const weatherData = {
+            location: json.name,
+            weather: json.weather[0].main
+        }
+        weatherDataActive(weatherData);
     })
     .catch((err) => {
       console.error(err);
     });
 };
 
-const accessToGeo = (postion) => {
+const accessToGeo = ({ coords }) => {
+    const { latitde, longitude } = coords;
+    
+    // shorthand property
     const postionObj = {
-        latitde: postion.coords.latitde,
-        longitude: postion.coords.longitude,
+        latitde,
+        longitude,
     };
 
     weatherSearch(postionObj);
