@@ -1,6 +1,5 @@
 const todoInput = document.querySelector("#todo-input");
 const todoList = document.querySelector("#todo-list");
-
 const savedTodoList = JSON.parse(localStorage.getItem("save-items"));
 
 const createTodo = (storageData) => {
